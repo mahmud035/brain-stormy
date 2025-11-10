@@ -43,3 +43,28 @@
 .btn-log-out:hover {
   background-color: #f1236f;
 }
+
+.dark-mode-toggle {
+  background: none;
+  border: none;
+  margin-left: auto !important;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dark-mode-toggle:focus {
+  outline: 2px solid #ffffff55;
+  outline-offset: 4px;
+  border-radius: 50%;
+}
+
+.dark-mode-toggle svg {
+  transition: transform 0.2s ease;
+}
+
+.dark-mode-toggle:hover svg {
+  transform: rotate(10deg) scale(1.05);
+}

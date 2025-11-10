@@ -86,26 +86,28 @@ const Header = () => {
                   <NavLink to="/faq">FAQ</NavLink>
                   {user?.email && <NavLink to="/checkout">Checkout</NavLink>}
 
-                  <div
-                    onClick={(e) => setDarkMode(!darkMode)}
-                    style={{ marginLeft: 'auto !important' }}
+                  <button
+                    type="button"
+                    onClick={() => setDarkMode(!darkMode)}
+                    aria-label={
+                      darkMode ? 'Switch to light mode' : 'Switch to dark mode'
+                    }
+                    className="dark-mode-toggle"
                   >
                     {darkMode ? (
                       <HiSun
                         className="text-white"
                         size={32}
-                        style={{ cursor: 'pointer' }}
                         title="Switch Light"
                       />
                     ) : (
                       <BiMoon
                         className="text-white"
                         size={32}
-                        style={{ cursor: 'pointer' }}
                         title="Switch Dark"
                       />
                     )}
-                  </div>
+                  </button>
                 </Nav>
 
                 <Nav className="user-profile-and-logout mt-lg-0">
